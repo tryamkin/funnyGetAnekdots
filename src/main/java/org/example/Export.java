@@ -3,6 +3,7 @@ package org.example;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Export {
 
@@ -22,6 +23,18 @@ public class Export {
                 writer.newLine();
             }
             System.out.println("ArrayList успешно экспортирован в CSV файл: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    // Метод для экспорта Map в файл CSV
+    public static void exportMapToCSV(Map<Integer, String> map, String filePath) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            for (Map.Entry<Integer, String> entry : map.entrySet()) {
+                writer.write(entry.getKey() + "," + entry.getValue());
+                writer.newLine();
+            }
+            System.out.println("Map успешно экспортирован в CSV файл: " + filePath);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -4,10 +4,13 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public  class GetAneks {
 
     public static ArrayList  getAneks (int pages) throws IOException {
+        Map<Integer, String> anekMap = new HashMap<>();
         ArrayList<String> aneks = new ArrayList<>();
         String url = "https://anekdotov.net/anekdot/index-page-";
         for (int i = 2; i < pages; i++) {
@@ -24,4 +27,5 @@ public  class GetAneks {
         System.out.println(aneks.size());
         return aneks;
     }
+
 }
