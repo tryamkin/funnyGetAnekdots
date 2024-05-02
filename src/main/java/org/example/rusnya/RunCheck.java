@@ -25,7 +25,7 @@ public class RunCheck {
         //  clipboard.setContents(selection,selection);
         Long startTime = System.currentTimeMillis();
         int timer = 10*130*60*1000; // 3*60*1000 - 3 min
-        ArrayList<String> finalAneks = ImportAnek.importArrayListFromCSV("rusnya.csv");
+        ArrayList<String> finalAneks = ImportAnek.importArrayListFromCSV("src/rusnya.csv");
         //ArrayList<String> finalAneks = ImportAnek.importArrayListFromCSV("anekMap.csv");
         Thread backgroundThread = new Thread(() -> {
             while (System.currentTimeMillis() - startTime < timer){
