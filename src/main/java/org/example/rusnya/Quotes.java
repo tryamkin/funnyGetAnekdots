@@ -27,10 +27,7 @@ public class Quotes {
                 aneks.add(elements.get(i).text());}
         }
         Export.exportArrayListToCSV(aneks, "src/rusnya.csv");
-
         System.out.println(originalMap.size());
-        System.out.println(originalMap.get(100));
-        System.out.println(originalMap.get(originalMap.size()-4));
         Export.exportMapToCSV(originalMap, "src/rusnyaMap.csv");
     }
 
