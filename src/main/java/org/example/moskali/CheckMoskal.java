@@ -11,8 +11,8 @@ public class CheckMoskal {
         ArrayList<String> concat = new ArrayList();
         ArrayList<String> moskalall = new ArrayList();
         ArrayList<String> alllist = new ArrayList();
-        moskalall = ImportAnek.importArrayList("moskalall.dat");
-        alllist = ImportAnek.importArrayList("all.dat");
+        moskalall = ImportAnek.importArrayList("moskalLviv.dat");
+        alllist = ImportAnek.importArrayList("all1.dat");
 
         for (String s : moskalall) {
             concat.add(s);
@@ -28,6 +28,6 @@ public class CheckMoskal {
             System.out.println(s);
             System.out.println("------------------");
         }
-        Export.exportArrayList(concat, "all1.dat");
+        Export.exportArrayList(concat, "all.dat");
     }
 }
