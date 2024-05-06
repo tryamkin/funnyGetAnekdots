@@ -18,11 +18,11 @@ public class RunCheck {
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         Long startTime = System.currentTimeMillis();
         int timer = 10*130*60*1000; // 3*60*1000 - 3 min
-        ArrayList<String> finalAneks = ImportAnek.importArrayListFromCSV("src/rusnya.csv");
-        ArrayList<String> all = ImportAnek.importArrayList("src/all.dat");
+       // ArrayList<String> finalAneks = ImportAnek.importArrayListFromCSV("src/rusnya.csv");
+        ArrayList<String> all = ImportAnek.importArrayList("all.dat");
         Thread backgroundThread = new Thread(() -> {
             while (System.currentTimeMillis() - startTime < timer){
-                StringSelection select = new StringSelection(finalAneks.get(random.nextInt(finalAneks.size())));
+                StringSelection select = new StringSelection(all.get(random.nextInt(all.size())));
                 clipboard.setContents(select,select);
                 System.out.println(LocalDateTime.now());
                 robot.keyPress(KeyEvent.VK_CONTROL);
@@ -34,7 +34,7 @@ public class RunCheck {
                 robot.keyRelease(KeyEvent.VK_CONTROL);
                 robot.keyRelease(KeyEvent.VK_ENTER);
                 try {
-                    Thread.sleep(20000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
