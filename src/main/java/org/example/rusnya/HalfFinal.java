@@ -56,7 +56,7 @@ public class HalfFinal {
 
 
 
-    private static String readTxtFile(String text) {
+    public static String readTxtFile(String text) {
         try (FileReader reader = new FileReader("outSpace.txt")) {
             StringBuilder stringBuilder = new StringBuilder();
             int character;

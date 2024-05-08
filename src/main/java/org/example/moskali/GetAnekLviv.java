@@ -18,7 +18,7 @@ public class GetAnekLviv {
         for (int j = 1; j < 39; j++) {
             var documents = Jsoup.connect("https://rozdil.lviv.ua/anekdot/search/24/index.php?p="+j).get();
            // var elements = documents.selectXpath(element);
-                  for (int i = 0; i <8 ; i++) {
+                  for (int i = 0; i < 8 ; i++) {
                       moskal.add(documents.selectXpath("//*[@id=\"content\"]/table["+i+"]/tbody/tr[1]/td[1]/a").text()+ "\n");
                       }
 

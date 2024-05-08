@@ -13,7 +13,7 @@ import java.util.Map;
 public class Check {
     public static void main(String[] args) {
         ArrayList<String> all = new ArrayList<>();
-      all = ImportAnek.importArrayList("all.dat");
+        all = ImportAnek.importArrayList("all.dat");
 
         System.out.println(all.size());
         for (int i = 0; i < all.size(); i++) {
